@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+
+    <title>Bcrypt Generator</title>
+
+    <meta name="description" content="Free online Bcrypt Generator tool to hash passwords securely using bcrypt encryption." />
+    <meta name="keywords" content="bcrypt generator, password hash, bcrypt hash, online bcrypt tool, encryption" />
+    <meta name="author" content="Bcrypt Generator" />
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+
+    <!-- bcryptjs -->
+    <script src="https://cdn.jsdelivr.net/npm/bcryptjs@2.4.3/dist/bcrypt.min.js"></script>
+</head>
+
+<body class="bg-light">
+
+    <!-- Header -->
+    <header class="border-bottom bg-white shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="fa-solid fa-lock text-primary fs-4"></i>
+                    <h1 class="h4 mb-0 fw-bold">Bcrypt Generator</h1>
+                </div>
+
+                <a href="#" class="btn btn-outline-primary btn-sm">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    Secure Tool
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="py-5">
+        <div class="container">
+
+            <!-- Description -->
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <h2 class="h4 fw-bold mb-3">
+                                Generate Secure Bcrypt Hashes
+                            </h2>
+
+                            <p class="text-secondary mb-0">
+                                This free online Bcrypt Generator allows you to securely hash passwords using bcrypt encryption.
+                                Perfect for developers who need secure password hashing for applications and authentication systems.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Generator -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body p-4">
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Password
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="password"
+                                    class="form-control form-control-lg"
+                                    placeholder="Enter password"
+                                />
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Salt Rounds
+                                </label>
+
+                                <select id="rounds" class="form-select">
+                                    <option value="8">8</option>
+                                    <option value="10" selected>10</option>
+                                    <option value="12">12</option>
+                                    <option value="14">14</option>
+                                </select>
+                            </div>
+
+                            <div class="d-grid mb-4">
+                                <button
+                                    class="btn btn-primary btn-lg"
+                                    onclick="generateHash()"
+                                >
+                                    <i class="fa-solid fa-key"></i>
+                                    Generate Hash
+                                </button>
+                            </div>
+
+                            <div>
+                                <label class="form-label fw-semibold">
+                                    Bcrypt Hash
+                                </label>
+
+                                <textarea
+                                    id="result"
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Generated bcrypt hash will appear here..."
+                                    readonly
+                                ></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Ad Space -->
+                    <div class="card border-0 shadow-sm mt-4">
+                        <div class="card-body text-center py-5">
+                            <div class="mb-2">
+                                <i class="fa-solid fa-rectangle-ad fs-2 text-secondary"></i>
+                            </div>
+
+                            <h3 class="h6 fw-bold">Advertisement Space</h3>
+
+                            <p class="text-secondary mb-0">
+                                Your advertisement banner can be placed here.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">
+                Bcrypt Generator
+            </p>
+
+            <p class="text-secondary small mb-0">
+                Secure password hashing tool for developers.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- App Script -->
+    <script>
+        async function generateHash() {
+            const password = document.getElementById('password').value;
+            const rounds = parseInt(document.getElementById('rounds').value);
+            const result = document.getElementById('result');
+
+            if (!password) {
+                alert('Please enter a password.');
+                return;
+            }
+
+            result.value = 'Generating hash...';
+
+            try {
+                const salt = bcrypt.genSaltSync(rounds);
+                const hash = bcrypt.hashSync(password, salt);
+
+                result.value = hash;
+            } catch (error) {
+                result.value = 'Error generating bcrypt hash.';
+            }
+        }
+    </script>
+
+</body>
+</html>
