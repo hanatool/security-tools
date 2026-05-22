@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Modern HMAC Generator tool to create secure HMAC hashes instantly using multiple algorithms." />
+    <meta name="description"
+        content="Modern HMAC Generator tool to create secure HMAC hashes instantly using multiple algorithms." />
     <meta name="keywords" content="HMAC Generator, SHA256, SHA1, Security Tool, Hash Generator, Bootstrap" />
     <meta name="author" content="HMAC Generator" />
 
@@ -11,11 +13,12 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/crypto-js@4.2.0/crypto-js.min.js"></script>
 </head>
-<body class="bg-light">
+
+<body class="bg-light text-dark">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-none sticky-top">
@@ -54,7 +57,8 @@
             </h1>
 
             <p class="text-secondary mt-3 mx-auto" style="max-width: 700px;">
-                Generate secure HMAC hashes instantly using popular algorithms such as SHA1, SHA256, SHA512, and MD5. Fast, responsive, and easy to use.
+                Generate secure HMAC hashes instantly using popular algorithms such as SHA1, SHA256, SHA512, and MD5.
+                Fast, responsive, and easy to use.
             </p>
 
             <a href="#generator" class="btn btn-primary btn-lg mt-3">
@@ -96,12 +100,8 @@
                                     Message
                                 </label>
 
-                                <textarea
-                                    id="message"
-                                    class="form-control form-control-lg"
-                                    rows="5"
-                                    placeholder="Enter your message here..."
-                                ></textarea>
+                                <textarea id="message" class="form-control form-control-lg" rows="5"
+                                    placeholder="Enter your message here..."></textarea>
                             </div>
 
                             <div class="mb-4">
@@ -109,12 +109,8 @@
                                     Secret Key
                                 </label>
 
-                                <input
-                                    type="text"
-                                    id="secret"
-                                    class="form-control form-control-lg"
-                                    placeholder="Enter secret key"
-                                />
+                                <input type="text" id="secret" class="form-control form-control-lg"
+                                    placeholder="Enter secret key" />
                             </div>
 
                             <div class="mb-4">
@@ -142,13 +138,8 @@
                                     Result
                                 </label>
 
-                                <textarea
-                                    id="result"
-                                    class="form-control"
-                                    rows="5"
-                                    readonly
-                                    placeholder="Generated HMAC will appear here..."
-                                ></textarea>
+                                <textarea id="result" class="form-control" rows="5" readonly
+                                    placeholder="Generated HMAC will appear here..."></textarea>
                             </div>
 
                         </div>
@@ -224,7 +215,10 @@
             </p>
 
             <p class="text-secondary small mb-0">
-                © 2026 All Rights Reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All Rights Reserved.
             </p>
         </div>
     </footer>
@@ -267,4 +261,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>

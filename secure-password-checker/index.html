@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Secure Password Checker</title>
 
-    <meta name="description" content="Secure Password Checker helps you test password strength instantly with a modern and responsive interface." />
+    <meta name="description"
+        content="Secure Password Checker helps you test password strength instantly with a modern and responsive interface." />
     <meta name="keywords" content="password checker, secure password, password strength, bootstrap password tool" />
     <meta name="author" content="Secure Password Checker" />
     <meta name="robots" content="index, follow" />
@@ -91,12 +93,8 @@
                                 </label>
 
                                 <div class="input-group input-group-lg">
-                                    <input
-                                        type="password"
-                                        id="passwordInput"
-                                        class="form-control"
-                                        placeholder="Type your password"
-                                    >
+                                    <input type="password" id="passwordInput" class="form-control"
+                                        placeholder="Type your password">
 
                                     <button class="btn btn-outline-secondary" id="togglePassword">
                                         <i class="fa-solid fa-eye"></i>
@@ -105,12 +103,7 @@
                             </div>
 
                             <div class="progress mb-3" style="height: 12px;">
-                                <div
-                                    id="strengthBar"
-                                    class="progress-bar"
-                                    role="progressbar"
-                                    style="width: 0%"
-                                ></div>
+                                <div id="strengthBar" class="progress-bar" role="progressbar" style="width: 0%"></div>
                             </div>
 
                             <div class="d-flex justify-content-between align-items-center">
@@ -270,7 +263,10 @@
 
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                     <span class="fw-semibold">
-                        © 2026 Secure Password Checker
+                        © <script type='text/javascript'>
+                            var creditsyear = new Date();
+                            document.write(creditsyear.getFullYear());
+                        </script> Secure Password Checker
                     </span>
                 </div>
 
@@ -344,17 +340,18 @@
         });
 
         togglePassword.addEventListener("click", function () {
-            const type = passwordInput.getAttribute("type") === "password"
-                ? "text"
-                : "password";
+            const type = passwordInput.getAttribute("type") === "password" ?
+                "text" :
+                "password";
 
             passwordInput.setAttribute("type", type);
 
-            this.innerHTML = type === "password"
-                ? '<i class="fa-solid fa-eye"></i>'
-                : '<i class="fa-solid fa-eye-slash"></i>';
+            this.innerHTML = type === "password" ?
+                '<i class="fa-solid fa-eye"></i>' :
+                '<i class="fa-solid fa-eye-slash"></i>';
         });
     </script>
 
 </body>
+
 </html>

@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AES Encrypt & Decrypt Tool - Secure text encryption and decryption using AES algorithm.">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description"
+        content="AES Encrypt & Decrypt Tool - Secure text encryption and decryption using AES algorithm.">
     <meta name="keywords" content="AES Encrypt, AES Decrypt, Encryption Tool, Bootstrap AES">
     <meta name="author" content="OpenAI">
     <meta name="robots" content="index, follow">
@@ -19,14 +21,14 @@
     <!-- CryptoJS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-none sticky-top border-bottom">
         <div class="container">
             <a class="navbar-brand fw-bold text-dark" href="#">
-                <i class="fa-solid fa-lock text-primary"></i> AES Encrypt
-            </a>
+                <i class="fa-solid fa-lock text-warning me-2"></i>AES Encrypt</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -62,7 +64,7 @@
                 Fast, lightweight, responsive, and easy to use.
             </p>
 
-            <a href="#tool" class="btn btn-primary btn-lg mt-3">
+            <a href="#tool" class="btn btn-warning btn-lg mt-3">
                 <i class="fa-solid fa-shield-halved"></i> Start Now
             </a>
         </div>
@@ -80,7 +82,7 @@
                         <div class="card-body p-4">
 
                             <h3 class="fw-bold mb-4">
-                                <i class="fa-solid fa-key text-primary"></i>
+                                <i class="fa-solid fa-key text-warning"></i>
                                 Encryption Tool
                             </h3>
 
@@ -89,12 +91,8 @@
                                     Input Text
                                 </label>
 
-                                <textarea
-                                    id="inputText"
-                                    class="form-control"
-                                    rows="6"
-                                    placeholder="Enter your text here..."
-                                ></textarea>
+                                <textarea id="inputText" class="form-control" rows="6"
+                                    placeholder="Enter your text here..."></textarea>
                             </div>
 
                             <div class="mb-3">
@@ -102,12 +100,7 @@
                                     Secret Key
                                 </label>
 
-                                <input
-                                    type="text"
-                                    id="secretKey"
-                                    class="form-control"
-                                    placeholder="Enter secret key"
-                                >
+                                <input type="text" id="secretKey" class="form-control" placeholder="Enter secret key">
                             </div>
 
                             <div class="d-flex flex-wrap gap-2 mb-4">
@@ -137,13 +130,8 @@
                                     Result
                                 </label>
 
-                                <textarea
-                                    id="result"
-                                    class="form-control"
-                                    rows="6"
-                                    placeholder="Result will appear here..."
-                                    readonly
-                                ></textarea>
+                                <textarea id="result" class="form-control" rows="6"
+                                    placeholder="Result will appear here..." readonly></textarea>
                             </div>
 
                         </div>
@@ -175,7 +163,8 @@
                             </h5>
 
                             <p class="text-secondary mb-0">
-                                AES (Advanced Encryption Standard) is one of the most secure and widely used encryption methods for protecting sensitive information.
+                                AES (Advanced Encryption Standard) is one of the most secure and widely used encryption
+                                methods for protecting sensitive information.
                             </p>
                         </div>
                     </div>
@@ -193,7 +182,8 @@
                         </h3>
 
                         <p class="text-secondary">
-                            This AES Encrypt & Decrypt tool allows users to securely encode and decode text using a secret key.
+                            This AES Encrypt & Decrypt tool allows users to securely encode and decode text using a
+                            secret key.
                             Everything runs directly in your browser without storing your data on any server.
                         </p>
 
@@ -255,7 +245,10 @@
             </p>
 
             <p class="text-secondary mb-0">
-                © 2026 All Rights Reserved
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All Rights Reserved
             </p>
         </div>
     </footer>
@@ -322,4 +315,5 @@
     </script>
 
 </body>
+
 </html>

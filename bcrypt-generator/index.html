@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
-    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no' name='viewport' />
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no'
+        name='viewport' />
 
     <title>Bcrypt Generator</title>
 
-    <meta name="description" content="Free online Bcrypt Generator tool to hash passwords securely using bcrypt encryption." />
+    <meta name="description"
+        content="Free online Bcrypt Generator tool to hash passwords securely using bcrypt encryption." />
     <meta name="keywords" content="bcrypt generator, password hash, bcrypt hash, online bcrypt tool, encryption" />
     <meta name="author" content="Bcrypt Generator" />
 
@@ -23,11 +26,11 @@
 <body class="bg-light text-dark">
 
     <!-- Header -->
-    <header class="border-bottom bg-white shadow-none sticky-top">
+    <header class="border-bottom bg-white sticky-top">
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <div class="container">
                 <a class="navbar-brand fw-bold text-dark" href="#">
-                    <i class="fa-solid fa-lock text-primary"></i>
+                    <i class="fa-solid fa-lock text-primary me-2"></i>
                     Bcrypt Generator
                 </a>
 
@@ -36,7 +39,7 @@
                     Secure Tool
                 </a>
             </div>
-        </div>
+            </div>
     </header>
 
     <!-- Main -->
@@ -53,8 +56,10 @@
                             </h2>
 
                             <p class="text-secondary mb-0">
-                                This free online Bcrypt Generator allows you to securely hash passwords using bcrypt encryption.
-                                Perfect for developers who need secure password hashing for applications and authentication systems.
+                                This free online Bcrypt Generator allows you to securely hash passwords using bcrypt
+                                encryption.
+                                Perfect for developers who need secure password hashing for applications and
+                                authentication systems.
                             </p>
                         </div>
                     </div>
@@ -73,12 +78,8 @@
                                     Password
                                 </label>
 
-                                <input
-                                    type="text"
-                                    id="password"
-                                    class="form-control form-control-lg"
-                                    placeholder="Enter password"
-                                />
+                                <input type="text" id="password" class="form-control form-control-lg"
+                                    placeholder="Enter password" />
                             </div>
 
                             <div class="mb-3">
@@ -95,10 +96,7 @@
                             </div>
 
                             <div class="d-grid mb-4">
-                                <button
-                                    class="btn btn-primary btn-lg"
-                                    onclick="generateHash()"
-                                >
+                                <button class="btn btn-primary btn-lg" onclick="generateHash()">
                                     <i class="fa-solid fa-key"></i>
                                     Generate Hash
                                 </button>
@@ -109,13 +107,8 @@
                                     Bcrypt Hash
                                 </label>
 
-                                <textarea
-                                    id="result"
-                                    class="form-control"
-                                    rows="5"
-                                    placeholder="Generated bcrypt hash will appear here..."
-                                    readonly
-                                ></textarea>
+                                <textarea id="result" class="form-control" rows="5"
+                                    placeholder="Generated bcrypt hash will appear here..." readonly></textarea>
                             </div>
 
                         </div>
@@ -184,4 +177,5 @@
     </script>
 
 </body>
+
 </html>

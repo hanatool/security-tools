@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Modern RSA Key Generator tool for generating secure public and private RSA keys online. Fast, responsive, and easy to use.">
-    <meta name="keywords" content="RSA Key Generator, RSA, encryption, security, public key, private key, bootstrap tool">
+    <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport' />
+    <meta name="description"
+        content="Modern RSA Key Generator tool for generating secure public and private RSA keys online. Fast, responsive, and easy to use.">
+    <meta name="keywords"
+        content="RSA Key Generator, RSA, encryption, security, public key, private key, bootstrap tool">
     <meta name="author" content="RSA Key Generator">
     <meta name="robots" content="index, follow">
 
@@ -17,14 +20,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-dark" href="#">
-                <i class="fa-solid fa-key text-primary me-2"></i>RSA Key Generator
-            </a>
+                <i class="fa-solid fa-key text-primary me-2"></i>RSA Key Generator</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -138,7 +141,8 @@
                                             Public Key
                                         </label>
 
-                                        <textarea class="form-control" rows="8" id="publicKey" placeholder="Generated public key will appear here..."></textarea>
+                                        <textarea class="form-control" rows="8" id="publicKey"
+                                            placeholder="Generated public key will appear here..."></textarea>
                                     </div>
 
                                     <div class="col-12">
@@ -146,7 +150,8 @@
                                             Private Key
                                         </label>
 
-                                        <textarea class="form-control" rows="10" id="privateKey" placeholder="Generated private key will appear here..."></textarea>
+                                        <textarea class="form-control" rows="10" id="privateKey"
+                                            placeholder="Generated private key will appear here..."></textarea>
                                     </div>
 
                                     <div class="col-md-6">
@@ -184,12 +189,14 @@
                             </h3>
 
                             <p class="text-secondary">
-                                RSA is one of the most widely used public-key cryptography algorithms for secure data transmission.
+                                RSA is one of the most widely used public-key cryptography algorithms for secure data
+                                transmission.
                                 It uses a pair of keys: a public key for encryption and a private key for decryption.
                             </p>
 
                             <p class="text-secondary">
-                                This modern RSA Key Generator helps developers quickly create secure key pairs directly in the browser.
+                                This modern RSA Key Generator helps developers quickly create secure key pairs directly
+                                in the browser.
                                 The interface is lightweight, responsive, and optimized for desktop and mobile devices.
                             </p>
 
@@ -245,7 +252,10 @@
             </p>
 
             <p class="text-muted small mb-0">
-                © 2026 All Rights Reserved.
+                © <script type='text/javascript'>
+                    var creditsyear = new Date();
+                    document.write(creditsyear.getFullYear());
+                </script> All Rights Reserved.
             </p>
         </div>
     </footer>
@@ -264,14 +274,14 @@
             const size = document.getElementById('keySize').value;
 
             publicKey.value =
-`-----BEGIN PUBLIC KEY-----
+                `-----BEGIN PUBLIC KEY-----
 RSA-${size}-PUBLIC-KEY-EXAMPLE
 MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtest
 GeneratedPublicKeyExampleOnly
 -----END PUBLIC KEY-----`;
 
             privateKey.value =
-`-----BEGIN PRIVATE KEY-----
+                `-----BEGIN PRIVATE KEY-----
 RSA-${size}-PRIVATE-KEY-EXAMPLE
 MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQ
 GeneratedPrivateKeyExampleOnly
@@ -290,4 +300,5 @@ GeneratedPrivateKeyExampleOnly
     </script>
 
 </body>
+
 </html>

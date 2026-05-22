@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Modern SSL Checker Tool to verify SSL certificate status, expiration date, and security details." />
+    <meta name="description"
+        content="Modern SSL Checker Tool to verify SSL certificate status, expiration date, and security details." />
     <meta name="keywords" content="SSL Checker, SSL Certificate, HTTPS, Security Tool, Website Security" />
     <meta name="author" content="SSL Checker" />
     <meta name="robots" content="index, follow" />
@@ -14,11 +16,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- Navbar -->
@@ -95,13 +98,8 @@
                                         <i class="fa-solid fa-globe text-primary"></i>
                                     </span>
 
-                                    <input
-                                        type="text"
-                                        id="domainInput"
-                                        class="form-control"
-                                        placeholder="example.com"
-                                        required
-                                    >
+                                    <input type="text" id="domainInput" class="form-control" placeholder="example.com"
+                                        required>
 
                                     <button class="btn btn-primary px-4" type="submit">
                                         <i class="fa-solid fa-magnifying-glass me-2"></i>
@@ -295,12 +293,12 @@
         const resultBox = document.getElementById('resultBox');
         const domainResult = document.getElementById('domainResult');
 
-        sslForm.addEventListener('submit', function(e) {
+        sslForm.addEventListener('submit', function (e) {
             e.preventDefault();
 
             const domain = document.getElementById('domainInput').value.trim();
 
-            if(domain !== '') {
+            if (domain !== '') {
                 domainResult.textContent = domain;
                 resultBox.classList.remove('d-none');
 
@@ -312,4 +310,5 @@
     </script>
 
 </body>
+
 </html>

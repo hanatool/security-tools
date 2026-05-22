@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -15,14 +16,14 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body class="bg-light text-dark">
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom shadow-none sticky-top">
         <div class="container">
             <a class="navbar-brand fw-bold text-dark" href="#">
-                <i class="fa-solid fa-key text-primary me-2"></i>API Key Generator
-            </a>
+                <i class="fa-solid fa-key text-primary me-2"></i>API Key Generator</a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
                 <span class="navbar-toggler-icon"></span>
@@ -104,13 +105,8 @@
                                     </label>
 
                                     <div class="input-group input-group-lg">
-                                        <input
-                                            type="text"
-                                            class="form-control"
-                                            id="apiKey"
-                                            placeholder="Your generated key will appear here"
-                                            readonly
-                                        >
+                                        <input type="text" class="form-control" id="apiKey"
+                                            placeholder="Your generated key will appear here" readonly>
 
                                         <button class="btn btn-outline-primary" id="copyBtn">
                                             <i class="fa-solid fa-copy"></i>
@@ -234,7 +230,10 @@
 
                 <div class="col-md-6 text-center text-md-end">
                     <small class="text-secondary">
-                        © 2026 All Rights Reserved.
+                        © <script type='text/javascript'>
+                            var creditsyear = new Date();
+                            document.write(creditsyear.getFullYear());
+                        </script> All Rights Reserved.
                     </small>
                 </div>
 
@@ -281,4 +280,5 @@
     </script>
 
 </body>
+
 </html>
