@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Modern SSL Checker Tool to verify SSL certificate status, expiration date, and security details." />
+    <meta name="keywords" content="SSL Checker, SSL Certificate, HTTPS, Security Tool, Website Security" />
+    <meta name="author" content="SSL Checker" />
+    <meta name="robots" content="index, follow" />
+
+    <title>SSL Checker</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-shield-halved text-primary me-2"></i>SSL Checker
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#checker">Checker</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <div class="mb-4">
+                <span class="badge bg-primary px-3 py-2 fs-6">
+                    Secure Website SSL Verification
+                </span>
+            </div>
+
+            <h1 class="display-5 fw-bold mb-3">
+                Check Your SSL Certificate Instantly
+            </h1>
+
+            <p class="lead text-secondary mx-auto" style="max-width: 750px;">
+                Verify SSL certificate validity, expiration date, issuer, and HTTPS security
+                status for any website with our modern SSL Checker tool.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="py-5" id="checker">
+        <div class="container">
+
+            <!-- SSL Checker Card -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 p-lg-5">
+
+                            <div class="text-center mb-4">
+                                <i class="fa-solid fa-lock text-primary fs-1 mb-3"></i>
+                                <h2 class="fw-bold">SSL Certificate Checker</h2>
+                                <p class="text-secondary">
+                                    Enter a domain name to check SSL certificate information.
+                                </p>
+                            </div>
+
+                            <form id="sslForm">
+                                <div class="input-group input-group-lg mb-3">
+                                    <span class="input-group-text bg-white">
+                                        <i class="fa-solid fa-globe text-primary"></i>
+                                    </span>
+
+                                    <input
+                                        type="text"
+                                        id="domainInput"
+                                        class="form-control"
+                                        placeholder="example.com"
+                                        required
+                                    >
+
+                                    <button class="btn btn-primary px-4" type="submit">
+                                        <i class="fa-solid fa-magnifying-glass me-2"></i>
+                                        Check
+                                    </button>
+                                </div>
+                            </form>
+
+                            <!-- Result -->
+                            <div id="resultBox" class="d-none mt-4">
+                                <div class="alert alert-success border-0 rounded-4 shadow-sm">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <i class="fa-solid fa-circle-check fs-3 me-3"></i>
+                                        <div>
+                                            <h5 class="mb-0 fw-bold">SSL Certificate Active</h5>
+                                            <small id="domainResult">example.com</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="bg-white rounded-3 p-3 border">
+                                                <small class="text-secondary">Issuer</small>
+                                                <h6 class="fw-bold mb-0">Let's Encrypt</h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="bg-white rounded-3 p-3 border">
+                                                <small class="text-secondary">Encryption</small>
+                                                <h6 class="fw-bold mb-0">TLS 1.3</h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="bg-white rounded-3 p-3 border">
+                                                <small class="text-secondary">Valid Until</small>
+                                                <h6 class="fw-bold mb-0">December 31, 2026</h6>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <div class="bg-white rounded-3 p-3 border">
+                                                <small class="text-secondary">Status</small>
+                                                <h6 class="fw-bold text-success mb-0">
+                                                    Secure Connection
+                                                </h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Ads Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-8">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body text-center py-5">
+                            <small class="text-uppercase text-secondary fw-semibold">
+                                Advertisement
+                            </small>
+
+                            <div class="mt-3">
+                                <i class="fa-solid fa-rectangle-ad text-primary fs-1 mb-3"></i>
+
+                                <h5 class="fw-bold">
+                                    Your Ad Banner Here
+                                </h5>
+
+                                <p class="text-secondary mb-0">
+                                    728x90 Responsive Advertisement Area
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- About -->
+            <div class="row justify-content-center mt-5" id="about">
+                <div class="col-lg-10">
+
+                    <div class="row g-4">
+
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100">
+                                <div class="card-body p-4">
+                                    <i class="fa-solid fa-shield text-primary fs-2 mb-3"></i>
+
+                                    <h5 class="fw-bold">
+                                        Secure Validation
+                                    </h5>
+
+                                    <p class="text-secondary mb-0">
+                                        Verify website SSL security and encryption protocols instantly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100">
+                                <div class="card-body p-4">
+                                    <i class="fa-solid fa-clock text-warning fs-2 mb-3"></i>
+
+                                    <h5 class="fw-bold">
+                                        Expiration Tracking
+                                    </h5>
+
+                                    <p class="text-secondary mb-0">
+                                        Monitor SSL expiration dates before certificates become invalid.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card border-0 shadow-sm rounded-4 h-100">
+                                <div class="card-body p-4">
+                                    <i class="fa-solid fa-globe text-success fs-2 mb-3"></i>
+
+                                    <h5 class="fw-bold">
+                                        Global Access
+                                    </h5>
+
+                                    <p class="text-secondary mb-0">
+                                        Check SSL certificates from websites around the world quickly.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <h6 class="fw-bold mb-1">
+                        <i class="fa-solid fa-shield-halved text-primary me-2"></i>
+                        SSL Checker
+                    </h6>
+
+                    <small class="text-secondary">
+                        Modern SSL verification and HTTPS security tool.
+                    </small>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Privacy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        const sslForm = document.getElementById('sslForm');
+        const resultBox = document.getElementById('resultBox');
+        const domainResult = document.getElementById('domainResult');
+
+        sslForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const domain = document.getElementById('domainInput').value.trim();
+
+            if(domain !== '') {
+                domainResult.textContent = domain;
+                resultBox.classList.remove('d-none');
+
+                resultBox.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

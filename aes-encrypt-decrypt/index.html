@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AES Encrypt & Decrypt Tool - Secure text encryption and decryption using AES algorithm.">
+    <meta name="keywords" content="AES Encrypt, AES Decrypt, Encryption Tool, Bootstrap AES">
+    <meta name="author" content="OpenAI">
+    <meta name="robots" content="index, follow">
+
+    <title>AES Encrypt & Decrypt</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CryptoJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-none sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-lock text-primary"></i> AES Encrypt
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tool">Tool</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-3">
+                AES Encrypt & Decrypt Tool
+            </h1>
+
+            <p class="lead text-secondary mx-auto" style="max-width: 750px;">
+                Securely encrypt and decrypt your text using AES encryption directly in your browser.
+                Fast, lightweight, responsive, and easy to use.
+            </p>
+
+            <a href="#tool" class="btn btn-primary btn-lg mt-3">
+                <i class="fa-solid fa-shield-halved"></i> Start Now
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5" id="tool">
+        <div class="container">
+
+            <div class="row g-4">
+
+                <!-- Encrypt Decrypt Card -->
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <h3 class="fw-bold mb-4">
+                                <i class="fa-solid fa-key text-primary"></i>
+                                Encryption Tool
+                            </h3>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Input Text
+                                </label>
+
+                                <textarea
+                                    id="inputText"
+                                    class="form-control"
+                                    rows="6"
+                                    placeholder="Enter your text here..."
+                                ></textarea>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Secret Key
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="secretKey"
+                                    class="form-control"
+                                    placeholder="Enter secret key"
+                                >
+                            </div>
+
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <button class="btn btn-primary" onclick="encryptText()">
+                                    <i class="fa-solid fa-lock"></i>
+                                    Encrypt
+                                </button>
+
+                                <button class="btn btn-success" onclick="decryptText()">
+                                    <i class="fa-solid fa-lock-open"></i>
+                                    Decrypt
+                                </button>
+
+                                <button class="btn btn-secondary" onclick="copyResult()">
+                                    <i class="fa-solid fa-copy"></i>
+                                    Copy
+                                </button>
+
+                                <button class="btn btn-danger" onclick="clearFields()">
+                                    <i class="fa-solid fa-trash"></i>
+                                    Clear
+                                </button>
+                            </div>
+
+                            <div>
+                                <label class="form-label fw-semibold">
+                                    Result
+                                </label>
+
+                                <textarea
+                                    id="result"
+                                    class="form-control"
+                                    rows="6"
+                                    placeholder="Result will appear here..."
+                                    readonly
+                                ></textarea>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advertisement -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-sm rounded-4 mb-4">
+                        <div class="card-body text-center p-4">
+                            <h5 class="fw-bold mb-3">
+                                <i class="fa-solid fa-bullhorn text-warning"></i>
+                                Advertisement
+                            </h5>
+
+                            <div class="bg-light border rounded-4 p-5">
+                                <p class="text-muted mb-0">
+                                    Your Ad Space Here
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+                            <h5 class="fw-bold mb-3">
+                                <i class="fa-solid fa-circle-info text-info"></i>
+                                Why AES?
+                            </h5>
+
+                            <p class="text-secondary mb-0">
+                                AES (Advanced Encryption Standard) is one of the most secure and widely used encryption methods for protecting sensitive information.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Description -->
+            <section class="mt-5" id="about">
+                <div class="card border-0 shadow-sm rounded-4">
+                    <div class="card-body p-4 p-lg-5">
+
+                        <h3 class="fw-bold mb-3">
+                            About This Tool
+                        </h3>
+
+                        <p class="text-secondary">
+                            This AES Encrypt & Decrypt tool allows users to securely encode and decode text using a secret key.
+                            Everything runs directly in your browser without storing your data on any server.
+                        </p>
+
+                        <div class="row mt-4 g-4">
+
+                            <div class="col-md-4">
+                                <div class="border rounded-4 p-4 h-100 bg-white">
+                                    <h5 class="fw-bold">
+                                        <i class="fa-solid fa-bolt text-primary"></i>
+                                        Fast
+                                    </h5>
+
+                                    <p class="text-secondary mb-0">
+                                        Instant encryption and decryption performance.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="border rounded-4 p-4 h-100 bg-white">
+                                    <h5 class="fw-bold">
+                                        <i class="fa-solid fa-mobile-screen text-success"></i>
+                                        Responsive
+                                    </h5>
+
+                                    <p class="text-secondary mb-0">
+                                        Optimized for desktop, tablet, and mobile devices.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="border rounded-4 p-4 h-100 bg-white">
+                                    <h5 class="fw-bold">
+                                        <i class="fa-solid fa-shield text-danger"></i>
+                                        Secure
+                                    </h5>
+
+                                    <p class="text-secondary mb-0">
+                                        Uses AES encryption for better data protection.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">
+                AES Encrypt & Decrypt Tool
+            </p>
+
+            <p class="text-secondary mb-0">
+                © 2026 All Rights Reserved
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AES Script -->
+    <script>
+        function encryptText() {
+            const text = document.getElementById("inputText").value;
+            const key = document.getElementById("secretKey").value;
+
+            if (!text || !key) {
+                alert("Please enter text and secret key.");
+                return;
+            }
+
+            const encrypted = CryptoJS.AES.encrypt(text, key).toString();
+
+            document.getElementById("result").value = encrypted;
+        }
+
+        function decryptText() {
+            const text = document.getElementById("inputText").value;
+            const key = document.getElementById("secretKey").value;
+
+            if (!text || !key) {
+                alert("Please enter encrypted text and secret key.");
+                return;
+            }
+
+            try {
+                const decrypted = CryptoJS.AES.decrypt(text, key).toString(CryptoJS.enc.Utf8);
+
+                if (!decrypted) {
+                    alert("Invalid key or encrypted text.");
+                    return;
+                }
+
+                document.getElementById("result").value = decrypted;
+
+            } catch (error) {
+                alert("Decryption failed.");
+            }
+        }
+
+        function copyResult() {
+            const result = document.getElementById("result");
+
+            result.select();
+            result.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(result.value);
+
+            alert("Result copied!");
+        }
+
+        function clearFields() {
+            document.getElementById("inputText").value = "";
+            document.getElementById("secretKey").value = "";
+            document.getElementById("result").value = "";
+        }
+    </script>
+
+</body>
+</html>

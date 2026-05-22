@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Free online file checksum tool to generate MD5, SHA1, SHA256, and SHA512 hashes instantly." />
+    <meta name="keywords" content="checksum tool, md5 generator, sha256, file hash checker, online checksum" />
+    <meta name="author" content="File Checksum Tool" />
+    <meta name="theme-color" content="#ffffff" />
+
+    <title>File Checksum Tool</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+
+    <!-- CryptoJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom shadow-none sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-shield-halved text-primary me-2"></i>
+                File Checksum Tool
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tool">Tool</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="fw-bold mb-3">
+                Verify File Integrity Easily
+            </h1>
+
+            <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+                Generate MD5, SHA1, SHA256, and SHA512 checksums instantly in your browser.
+                Secure, fast, responsive, and completely free.
+            </p>
+
+            <a href="#tool" class="btn btn-primary btn-lg mt-3">
+                <i class="fa-solid fa-bolt me-2"></i>
+                Start Checking
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-5" id="tool">
+        <div class="container">
+
+            <!-- Ad Space -->
+            <div class="mb-5">
+                <div class="bg-white border rounded-4 shadow-sm p-4 text-center">
+                    <span class="badge bg-warning text-dark mb-2">Advertisement</span>
+                    <h5 class="mb-2">Your Ad Space Here</h5>
+                    <p class="text-secondary mb-0">
+                        Responsive advertisement section for banners or ad networks.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tool Card -->
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4 p-lg-5">
+
+                            <div class="text-center mb-4">
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-file-shield text-primary fa-3x"></i>
+                                </div>
+
+                                <h2 class="fw-bold">
+                                    File Checksum Generator
+                                </h2>
+
+                                <p class="text-secondary">
+                                    Upload a file to generate secure hash checksums.
+                                </p>
+                            </div>
+
+                            <!-- File Input -->
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    Select File
+                                </label>
+
+                                <input type="file" class="form-control form-control-lg" id="fileInput">
+                            </div>
+
+                            <!-- Loading -->
+                            <div id="loadingBox" class="alert alert-info d-none">
+                                <i class="fa-solid fa-spinner fa-spin me-2"></i>
+                                Processing file checksum...
+                            </div>
+
+                            <!-- Results -->
+                            <div id="resultBox" class="d-none">
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">MD5</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="md5Result" readonly>
+                                        <button class="btn btn-outline-primary copy-btn" data-target="md5Result">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">SHA1</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="sha1Result" readonly>
+                                        <button class="btn btn-outline-primary copy-btn" data-target="sha1Result">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">SHA256</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="sha256Result" readonly>
+                                        <button class="btn btn-outline-primary copy-btn" data-target="sha256Result">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="mb-0">
+                                    <label class="form-label fw-semibold">SHA512</label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" id="sha512Result" readonly>
+                                        <button class="btn btn-outline-primary copy-btn" data-target="sha512Result">
+                                            <i class="fa-regular fa-copy"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <section class="mt-5" id="about">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10">
+                        <div class="bg-white rounded-4 shadow-sm p-4 p-lg-5">
+
+                            <h3 class="fw-bold mb-3">
+                                About This Tool
+                            </h3>
+
+                            <p class="text-secondary">
+                                This online checksum tool helps you verify file integrity and detect modifications
+                                by generating secure hash values directly in your browser.
+                            </p>
+
+                            <div class="row g-4 mt-1">
+
+                                <div class="col-md-4">
+                                    <div class="border rounded-4 p-4 h-100">
+                                        <div class="mb-3 text-primary">
+                                            <i class="fa-solid fa-lock fa-2x"></i>
+                                        </div>
+
+                                        <h5>Secure</h5>
+
+                                        <p class="text-secondary mb-0">
+                                            Files are processed locally in your browser without uploading to servers.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="border rounded-4 p-4 h-100">
+                                        <div class="mb-3 text-success">
+                                            <i class="fa-solid fa-gauge-high fa-2x"></i>
+                                        </div>
+
+                                        <h5>Fast</h5>
+
+                                        <p class="text-secondary mb-0">
+                                            Generate checksum hashes instantly using optimized browser processing.
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="border rounded-4 p-4 h-100">
+                                        <div class="mb-3 text-danger">
+                                            <i class="fa-solid fa-mobile-screen fa-2x"></i>
+                                        </div>
+
+                                        <h5>Responsive</h5>
+
+                                        <p class="text-secondary mb-0">
+                                            Works perfectly across desktop, tablet, and mobile devices.
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1 fw-semibold">
+                File Checksum Tool
+            </p>
+
+            <p class="text-secondary small mb-0">
+                © 2026 All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const loadingBox = document.getElementById('loadingBox');
+        const resultBox = document.getElementById('resultBox');
+
+        fileInput.addEventListener('change', async function () {
+            const file = this.files[0];
+
+            if (!file) return;
+
+            loadingBox.classList.remove('d-none');
+            resultBox.classList.add('d-none');
+
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                const wordArray = CryptoJS.lib.WordArray.create(e.target.result);
+
+                const md5 = CryptoJS.MD5(wordArray).toString();
+                const sha1 = CryptoJS.SHA1(wordArray).toString();
+                const sha256 = CryptoJS.SHA256(wordArray).toString();
+                const sha512 = CryptoJS.SHA512(wordArray).toString();
+
+                document.getElementById('md5Result').value = md5;
+                document.getElementById('sha1Result').value = sha1;
+                document.getElementById('sha256Result').value = sha256;
+                document.getElementById('sha512Result').value = sha512;
+
+                loadingBox.classList.add('d-none');
+                resultBox.classList.remove('d-none');
+            };
+
+            reader.readAsArrayBuffer(file);
+        });
+
+        // Copy Button
+        document.querySelectorAll('.copy-btn').forEach(button => {
+            button.addEventListener('click', function () {
+                const targetId = this.getAttribute('data-target');
+                const input = document.getElementById(targetId);
+
+                navigator.clipboard.writeText(input.value);
+
+                this.innerHTML = '<i class="fa-solid fa-check"></i>';
+
+                setTimeout(() => {
+                    this.innerHTML = '<i class="fa-regular fa-copy"></i>';
+                }, 1500);
+            });
+        });
+    </script>
+
+</body>
+</html>

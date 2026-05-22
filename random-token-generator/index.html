@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Random Token Generator - Generate secure random tokens instantly with a modern Bootstrap interface.">
+    <meta name="keywords" content="random token generator, secure token, bootstrap tool, token maker">
+    <meta name="author" content="Random Token Generator">
+
+    <title>Random Token Generator</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body class="bg-light text-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white shadow-none sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-shield-halved text-primary me-2"></i>
+                Random Token Generator
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#generator">Generator</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3">
+                Secure Random Token Generator
+            </h1>
+
+            <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+                Generate strong and secure random tokens instantly for authentication,
+                APIs, passwords, verification systems, and development projects.
+            </p>
+
+            <a href="#generator" class="btn btn-primary btn-lg mt-3">
+                <i class="fa-solid fa-bolt me-2"></i>
+                Generate Token
+            </a>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <main class="py-5">
+
+        <div class="container">
+
+            <!-- Generator Card -->
+            <section id="generator" class="mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <div class="card border-0 shadow-sm rounded-4">
+                            <div class="card-body p-4">
+
+                                <div class="text-center mb-4">
+                                    <h2 class="fw-bold">
+                                        Token Generator
+                                    </h2>
+
+                                    <p class="text-secondary mb-0">
+                                        Create a secure random token with custom length.
+                                    </p>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        Token Length
+                                    </label>
+
+                                    <input type="number"
+                                           class="form-control form-control-lg"
+                                           id="tokenLength"
+                                           value="32"
+                                           min="8"
+                                           max="256">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label class="form-label fw-semibold">
+                                        Generated Token
+                                    </label>
+
+                                    <textarea class="form-control"
+                                              id="tokenOutput"
+                                              rows="4"
+                                              readonly></textarea>
+                                </div>
+
+                                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                                    <button class="btn btn-primary btn-lg px-4" onclick="generateToken()">
+                                        <i class="fa-solid fa-wand-magic-sparkles me-2"></i>
+                                        Generate
+                                    </button>
+
+                                    <button class="btn btn-outline-secondary btn-lg px-4" onclick="copyToken()">
+                                        <i class="fa-solid fa-copy me-2"></i>
+                                        Copy
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Advertisement -->
+            <section class="mb-5">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <div class="card border-0 shadow-sm rounded-4 bg-white">
+                            <div class="card-body text-center py-5">
+
+                                <div class="mb-3">
+                                    <i class="fa-solid fa-rectangle-ad fa-3x text-primary"></i>
+                                </div>
+
+                                <h4 class="fw-bold">
+                                    Advertisement Space
+                                </h4>
+
+                                <p class="text-secondary mb-0">
+                                    You can place Google AdSense banners or sponsor ads here.
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section id="about">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8">
+
+                        <div class="card border-0 shadow-sm rounded-4">
+                            <div class="card-body p-4">
+
+                                <h3 class="fw-bold mb-3">
+                                    About This Tool
+                                </h3>
+
+                                <p class="text-secondary">
+                                    This Random Token Generator is designed to help developers,
+                                    website owners, and security professionals create secure
+                                    random strings for APIs, sessions, authentication systems,
+                                    and encryption-related projects.
+                                </p>
+
+                                <p class="text-secondary mb-0">
+                                    Built with Bootstrap 5 for a fast, responsive, and
+                                    minimal modern user experience across desktop and mobile devices.
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4 mt-5">
+        <div class="container text-center">
+
+            <p class="mb-1 fw-semibold">
+                Random Token Generator
+            </p>
+
+            <p class="text-secondary small mb-0">
+                © 2026 All Rights Reserved.
+            </p>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script -->
+    <script>
+        function generateToken() {
+            const length = parseInt(document.getElementById('tokenLength').value);
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let token = '';
+
+            for (let i = 0; i < length; i++) {
+                token += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+
+            document.getElementById('tokenOutput').value = token;
+        }
+
+        function copyToken() {
+            const tokenOutput = document.getElementById('tokenOutput');
+
+            if (tokenOutput.value.trim() === '') {
+                alert('Please generate a token first.');
+                return;
+            }
+
+            tokenOutput.select();
+            tokenOutput.setSelectionRange(0, 99999);
+
+            navigator.clipboard.writeText(tokenOutput.value);
+
+            alert('Token copied successfully!');
+        }
+
+        // Auto Generate on Load
+        window.onload = generateToken;
+    </script>
+
+</body>
+</html>

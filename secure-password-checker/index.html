@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Secure Password Checker</title>
+
+    <meta name="description" content="Secure Password Checker helps you test password strength instantly with a modern and responsive interface." />
+    <meta name="keywords" content="password checker, secure password, password strength, bootstrap password tool" />
+    <meta name="author" content="Secure Password Checker" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3064/3064155.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="bg-light text-dark">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-dark" href="#">
+                <i class="fa-solid fa-shield-halved text-primary me-2"></i>
+                Secure Password Checker
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#checker">Checker</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ads">Ads</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold mb-3">
+                Check Your Password Security
+            </h1>
+
+            <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+                Instantly analyze your password strength with a fast, modern, and secure password checker tool.
+            </p>
+
+            <a href="#checker" class="btn btn-primary btn-lg mt-3">
+                <i class="fa-solid fa-lock me-2"></i>
+                Start Checking
+            </a>
+        </div>
+    </header>
+
+    <!-- Password Checker -->
+    <section id="checker" class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <h2 class="h3 mb-4 text-center">
+                                Password Strength Checker
+                            </h2>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Enter Password
+                                </label>
+
+                                <div class="input-group input-group-lg">
+                                    <input
+                                        type="password"
+                                        id="passwordInput"
+                                        class="form-control"
+                                        placeholder="Type your password"
+                                    >
+
+                                    <button class="btn btn-outline-secondary" id="togglePassword">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="progress mb-3" style="height: 12px;">
+                                <div
+                                    id="strengthBar"
+                                    class="progress-bar"
+                                    role="progressbar"
+                                    style="width: 0%"
+                                ></div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold">Strength:</span>
+
+                                <span id="strengthText" class="badge bg-secondary">
+                                    Waiting
+                                </span>
+                            </div>
+
+                            <hr class="my-4">
+
+                            <div>
+                                <h5 class="mb-3">Security Tips</h5>
+
+                                <ul class="list-group">
+                                    <li class="list-group-item">
+                                        <i class="fa-solid fa-check text-success me-2"></i>
+                                        Use at least 8 characters
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <i class="fa-solid fa-check text-success me-2"></i>
+                                        Include uppercase letters
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <i class="fa-solid fa-check text-success me-2"></i>
+                                        Add numbers and symbols
+                                    </li>
+
+                                    <li class="list-group-item">
+                                        <i class="fa-solid fa-check text-success me-2"></i>
+                                        Avoid common passwords
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Description -->
+    <section id="about" class="py-5 bg-white border-top border-bottom">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+
+                <div class="col-lg-6">
+                    <h2 class="fw-bold mb-3">
+                        Why Use Secure Password Checker?
+                    </h2>
+
+                    <p class="text-secondary">
+                        Weak passwords can expose your personal accounts and sensitive information.
+                        Our tool helps you quickly evaluate password strength using modern security standards.
+                    </p>
+
+                    <p class="text-secondary">
+                        The checker runs directly in your browser, keeping your password private and secure.
+                    </p>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm rounded-4">
+                        <div class="card-body p-4">
+
+                            <div class="d-flex mb-4">
+                                <div class="me-3">
+                                    <i class="fa-solid fa-bolt fa-2x text-primary"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Fast Analysis</h5>
+                                    <p class="text-secondary mb-0">
+                                        Instant password evaluation in real-time.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex mb-4">
+                                <div class="me-3">
+                                    <i class="fa-solid fa-shield text-success fa-2x"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Private & Secure</h5>
+                                    <p class="text-secondary mb-0">
+                                        Your password never leaves your browser.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <i class="fa-solid fa-mobile-screen-button text-danger fa-2x"></i>
+                                </div>
+
+                                <div>
+                                    <h5>Responsive Design</h5>
+                                    <p class="text-secondary mb-0">
+                                        Works perfectly on desktop and mobile devices.
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Ads Section -->
+    <section id="ads" class="py-5">
+        <div class="container">
+
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">
+                    Advertisement Space
+                </h2>
+
+                <p class="text-secondary">
+                    You can place banner ads, Google AdSense, or promotional content here.
+                </p>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body text-center py-5">
+
+                    <div class="mb-3">
+                        <i class="fa-solid fa-rectangle-ad fa-4x text-primary"></i>
+                    </div>
+
+                    <h4 class="fw-bold">
+                        728 x 90 Banner Area
+                    </h4>
+
+                    <p class="text-secondary mb-0">
+                        Advertisement placeholder section.
+                    </p>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-top py-4">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <span class="fw-semibold">
+                        © 2026 Secure Password Checker
+                    </span>
+                </div>
+
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Privacy
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary me-3">
+                        Terms
+                    </a>
+
+                    <a href="#" class="text-decoration-none text-secondary">
+                        Contact
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const passwordInput = document.getElementById("passwordInput");
+        const strengthBar = document.getElementById("strengthBar");
+        const strengthText = document.getElementById("strengthText");
+        const togglePassword = document.getElementById("togglePassword");
+
+        passwordInput.addEventListener("input", function () {
+            const password = passwordInput.value;
+
+            let strength = 0;
+
+            if (password.length >= 8) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            let width = 0;
+            let text = "Weak";
+            let color = "bg-danger";
+
+            if (strength === 1) {
+                width = 25;
+                text = "Weak";
+                color = "bg-danger";
+            } else if (strength === 2) {
+                width = 50;
+                text = "Medium";
+                color = "bg-warning";
+            } else if (strength === 3) {
+                width = 75;
+                text = "Strong";
+                color = "bg-info";
+            } else if (strength === 4) {
+                width = 100;
+                text = "Very Strong";
+                color = "bg-success";
+            } else {
+                width = 0;
+                text = "Waiting";
+                color = "bg-secondary";
+            }
+
+            strengthBar.style.width = width + "%";
+            strengthBar.className = "progress-bar " + color;
+
+            strengthText.textContent = text;
+            strengthText.className = "badge " + color;
+        });
+
+        togglePassword.addEventListener("click", function () {
+            const type = passwordInput.getAttribute("type") === "password"
+                ? "text"
+                : "password";
+
+            passwordInput.setAttribute("type", type);
+
+            this.innerHTML = type === "password"
+                ? '<i class="fa-solid fa-eye"></i>'
+                : '<i class="fa-solid fa-eye-slash"></i>';
+        });
+    </script>
+
+</body>
+</html>
