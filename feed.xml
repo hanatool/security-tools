@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+  <channel>
+
+    <title>Hanapha Security Tools</title>
+    <link>https://tools.hanapha.com/security-tools/</link>
+
+    <description>
+      Free online security tools for encryption, hashing, password generation, SSL checking, token creation, and cybersecurity utilities.
+    </description>
+
+    <language>en-us</language>
+
+    <item>
+      <title>AES Encrypt Decrypt</title>
+      <link>https://tools.hanapha.com/security-tools/aes-encrypt-decrypt</link>
+      <description>
+        Encrypt and decrypt text securely using AES encryption online.
+      </description>
+    </item>
+
+    <item>
+      <title>API Key Generator</title>
+      <link>https://tools.hanapha.com/security-tools/api-key-generator</link>
+      <description>
+        Generate secure API keys instantly online.
+      </description>
+    </item>
+
+    <item>
+      <title>Bcrypt Generator</title>
+      <link>https://tools.hanapha.com/security-tools/bcrypt-generator</link>
+      <description>
+        Generate secure bcrypt password hashes online.
+      </description>
+    </item>
+
+    <item>
+      <title>CSP Generator</title>
+      <link>https://tools.hanapha.com/security-tools/csp-generator</link>
+      <description>
+        Generate Content Security Policy headers easily online.
+      </description>
+    </item>
+
+    <item>
+      <title>File Checksum Tool</title>
+      <link>https://tools.hanapha.com/security-tools/file-checksum-tool</link>
+      <description>
+        Verify file integrity using checksum generation and validation.
+      </description>
+    </item>
+
+    <item>
+      <title>HMAC Generator</title>
+      <link>https://tools.hanapha.com/security-tools/hmac-generator</link>
+      <description>
+        Generate HMAC hashes securely online.
+      </description>
+    </item>
+
+    <item>
+      <title>MD5 Generator</title>
+      <link>https://tools.hanapha.com/security-tools/md5-generator</link>
+      <description>
+        Create MD5 hashes instantly with an online generator.
+      </description>
+    </item>
+
+    <item>
+      <title>Password Generator</title>
+      <link>https://tools.hanapha.com/security-tools/password-generator</link>
+      <description>
+        Generate strong and secure passwords online.
+      </description>
+    </item>
+
+    <item>
+      <title>Random Token Generator</title>
+      <link>https://tools.hanapha.com/security-tools/random-token-generator</link>
+      <description>
+        Create random secure tokens for authentication and APIs.
+      </description>
+    </item>
+
+    <item>
+      <title>RSA Key Generator</title>
+      <link>https://tools.hanapha.com/security-tools/rsa-key-generator</link>
+      <description>
+        Generate RSA public and private keys online securely.
+      </description>
+    </item>
+
+    <item>
+      <title>Secure Password Checker</title>
+      <link>https://tools.hanapha.com/security-tools/secure-password-checker</link>
+      <description>
+        Check password strength and security instantly online.
+      </description>
+    </item>
+
+    <item>
+      <title>SHA256 Generator</title>
+      <link>https://tools.hanapha.com/security-tools/sha256-generator</link>
+      <description>
+        Generate SHA256 hashes quickly and securely online.
+      </description>
+    </item>
+
+    <item>
+      <title>SSL Checker</title>
+      <link>https://tools.hanapha.com/security-tools/ssl-checker</link>
+      <description>
+        Check SSL certificate status and validity online.
+      </description>
+    </item>
+
+  </channel>
+
+</rss>
